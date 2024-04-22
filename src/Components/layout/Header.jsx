@@ -1,6 +1,27 @@
 // Desc: Header component for the layout
+import { useNavigate, useLocation } from "react-router-dom"
+
 
 function Header() {
+
+  const navigate = useNavigate()
+  const location = useLocation()
+
+  // button location and text to align with path  on the header 
+  let btnText, targetRoute 
+
+  if (location.pathname === "/signup") {
+    btnText = "Login"
+    targetRoute = "/"
+  } else {
+    btnText ="Sign Up"
+    targetRoute = "/signup"
+  } 
+
+  const handleClick = () => {
+    navigate(targetRoute)
+  }
+
   return (
     <>
       <div className="navbar bg-[#AA4A44]">
@@ -23,7 +44,7 @@ function Header() {
     </div>
     <a className="btn btn-ghost text-xl">Firebase Auth</a>
   </div>
-  
+
   {/**<div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
       <li><a>Profile</a></li>
@@ -32,12 +53,9 @@ function Header() {
  */}
 
   <div className="navbar-end">
-    <a className="btn">Login</a>
+    <a className="btn" onClick={handleClick}>{btnText}</a>
   </div>
 
-  <div className="navbar-end">
-    <a className="btn">Sign Up</a>
-  </div>
 </div>
     </>
   )

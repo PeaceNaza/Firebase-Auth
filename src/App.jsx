@@ -8,8 +8,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 function App() {
   return (
     <>
-     <Header />
      <Router>
+     <Header />
        <Routes>
          <Route index element={<Login />} />
          <Route path="/signup" element={<SignUp />} />
