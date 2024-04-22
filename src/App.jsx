@@ -1,12 +1,21 @@
-import Card from "./Components/Card"
+import Header from "./Components/layout/Header"
+import Login from "./Components/pages/Login"
+import Profile from "./Components/pages/Profile"
+import SignUp from "./Components/pages/SignUp"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
 
 function App() {
   return (
     <>
-     
-      <h1 className="text-3xl font-bold underline text-center">Hello Ladies From Wtf24</h1>
-      <Card />
+     <Header />
+     <Router>
+       <Routes>
+         <Route index element={<Login />} />
+         <Route path="/signup" element={<SignUp />} />
+         <Route path="/profile" element={<Profile />} />
+       </Routes>
+     </Router>
     </>
   )
 }

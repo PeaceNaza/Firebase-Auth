@@ -1,5 +1,4 @@
 
-
 function Card() {
   return (
     <>
@@ -15,8 +14,6 @@ function Card() {
         </div>
       </div>
       </div>
-  
-      
     </>
   )
 }
