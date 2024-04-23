@@ -1,19 +1,25 @@
 // Desc: Header component for the layout
-import { useNavigate, useLocation } from "react-router-dom"
-
+import { useNavigate, useLocation, Link } from "react-router-dom"
 
 function Header() {
 
   const navigate = useNavigate()
   const location = useLocation()
 
+
   // button location and text to align with path  on the header 
+
+
   let btnText, targetRoute 
 
   if (location.pathname === "/signup") {
     btnText = "Login"
     targetRoute = "/"
-  } else {
+  } else if (location.pathname === "/profile") {
+    btnText = "Logout"
+    targetRoute = "/"
+  }
+  else {
     btnText ="Sign Up"
     targetRoute = "/signup"
   } 
@@ -42,7 +48,7 @@ function Header() {
         <li><a>Item 3</a></li>
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">Firebase Auth</a>
+    <a className="btn btn-ghost text-xl"><Link to="/">Firebase Auth</Link></a>
   </div>
 
   {/**<div className="navbar-center hidden lg:flex">
