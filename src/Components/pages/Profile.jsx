@@ -5,7 +5,7 @@ function Profile({user}) {
 
   return (
     <>
-     <div className="flex justify-center mt-10"><div className="flex justify-center mt-10">
+     <div className="flex justify-center mt-10">
       <div className="card w-96 bg-base-100 shadow-xl">
       <h2 className="card-title">Welcome {user}</h2>
       
