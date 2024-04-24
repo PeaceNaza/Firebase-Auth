@@ -4,7 +4,6 @@ import Profile from "./Components/pages/Profile"
 import SignUp from "./Components/pages/SignUp"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
-
 function App() {
   return (
     <>

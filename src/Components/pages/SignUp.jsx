@@ -30,8 +30,8 @@ function SignUp() {
 
   return (
     <>
-    <div className="flex justify-center mt-10">
-      <div className="card w-96 bg-base-100 shadow-xl mt-10">
+    <div className="flex justify-center mt-5">
+      <div className="card w-96 bg-base-100 shadow-xl mt-5">
       <h2 className="card-title justify-center mt-2">Sign Up</h2>
         <div className="card-body">
      <span className="label-text">Email</span>

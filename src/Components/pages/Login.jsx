@@ -3,6 +3,7 @@ import { auth } from "../../firebase"
 import { signInWithEmailAndPassword } from "firebase/auth"
 import { Link, useNavigate } from "react-router-dom"
 
+
 function Login() {
   const navigate = useNavigate()
   const [email, setEmail] = useState("")
@@ -22,7 +23,9 @@ function Login() {
   }
 
   return (
+    
     <>
+    
       <div className="flex justify-center mt-10">
         <div className="card w-96 bg-base-100 shadow-xl mt-10">
           
